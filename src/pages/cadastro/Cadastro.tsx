@@ -1,9 +1,9 @@
-import React, { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../services/Service'
-import './Cadastro.css'
 import { toastAlerta } from '../../utils/toastAlerta'
+import './Cadastro.css'
 
 function Cadastro() {
 
@@ -87,7 +87,7 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Usuario</label>
+            <label htmlFor="usuario">Email</label>
             <input
               type="text"
               id="usuario"

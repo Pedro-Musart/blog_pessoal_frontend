@@ -1,11 +1,24 @@
-import { Link } from 'react-router-dom'
-import Postagem from '../../../models/Postagem'
+import { Link } from 'react-router-dom';
+import Postagem from '../../../models/Postagem';
 
 interface CardPostagemProps {
   post: Postagem
 }
 
 function CardPostagem({post}: CardPostagemProps) {
+
+      // Convertemos a data criada no Banco de Dados no formato Date, e armazenamos em uma variavel
+    let dataDoBanco = new Date(post.data);
+
+    // Remover 3 horas da data devido ao Fuso Horário do Banco de Dados
+    dataDoBanco.setHours(dataDoBanco.getHours() - 3);
+
+    // Formatamos a data
+    let dataLocal = new Intl.DateTimeFormat(undefined, {
+        dateStyle: 'full',
+        timeStyle: 'medium',
+    }).format(dataDoBanco)
+
   return (
     <div className='border-slate-900 border flex flex-col rounded overflow-hidden justify-between'>
       <div>
@@ -17,10 +30,7 @@ function CardPostagem({post}: CardPostagemProps) {
           <h4 className='text-lg font-semibold uppercase'>{post.titulo}</h4>
           <p>{post.texto}</p>
           <p>Tema: {post.tema?.descricao}</p>
-          <p>Data: {new Intl.DateTimeFormat(undefined, {
-                    dateStyle: 'full',
-                    timeStyle: 'medium',
-                  }).format(new Date(post.data))}</p>
+          <p>Data: {dataLocal}</p>
         </div>
       </div>
       <div className="flex">
