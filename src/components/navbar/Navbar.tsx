@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.svg"
 import { AuthContext } from '../../contexts/AuthContext'
 import { toastAlerta } from '../../utils/toastAlerta'
 

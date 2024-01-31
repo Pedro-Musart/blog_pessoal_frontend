@@ -1,6 +1,6 @@
 import { FacebookLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
 import { useContext } from 'react'
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.svg"
 import { AuthContext } from '../../contexts/AuthContext'
 
 function Footer() {
