@@ -1,7 +1,7 @@
 # Blog Your Mind
 ![image](https://github.com/Pedro-Musart/blog_pessoal_frontend/assets/81385823/24f600e6-8985-4e01-9631-c041a2f674f5)
 
-Link de acesso ao site: https://blog-pessoal-frontend-7smgwvizb-pedro-musart.vercel.app/
+Link de acesso ao site: https://blog-pessoal-frontend-pied.vercel.app/
 
 Blog Your Mind é um website desenvolvido com React.ts, que permite os usuários realizarem operações completas de CRUD, criando seus próprios perfis, criando, atualizando ou deletando postagens e temas. O projeto possui API própria desenvolvida com o framework Spring
 
